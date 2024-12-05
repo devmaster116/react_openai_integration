@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-primary: #3b82f6;
+  --theme-primary-hover: #2563eb;
+  --theme-primary-bg: #1e40af;
+}
+
+/* Utility classes */
+.bg-theme {
+  background-color: var(--theme-primary);
+}
+
+.hover\:bg-theme-hover:hover {
+  background-color: var(--theme-primary-hover);
+}
+
+.text-theme {
+  color: var(--theme-primary);
+}
+
+.border-theme {
+  border-color: var(--theme-primary);
+}
+
+/* Dark mode overrides */
+.dark .bg-theme {
+  background-color: var(--theme-primary-bg);
+}
+
+.dark .text-theme {
+  color: var(--theme-primary);
+}
+
+/* Transitions */
+* {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Compliance message spacing */
+.main-content {
+  padding-bottom: 2.5rem;
+}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Essay Structure - Gradeyator{% endblock %}
+
+{% block content %}
+<div class="essay-structure">
+    <h1>Essay Structure Analysis</h1>
+    
+    <div class="essay-input">
+        <h2>Submit Your Essay</h2>
+        <textarea id="essay-text" placeholder="Paste your essay here..."></textarea>
+        <button onclick="analyzeEssay()">Analyze Structure</button>
+    </div>
+    
+    <div id="analysis-results" class="analysis-results">
+        <!-- Results will be populated by JavaScript -->
+    </div>
+</div>
+{% endblock %}

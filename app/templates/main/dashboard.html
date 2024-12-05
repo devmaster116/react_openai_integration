@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - ZADI{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h1>Welcome, {{ current_user.username }}</h1>
+    
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Essay Analysis</h3>
+            <p>Get instant feedback on your essay structure and content.</p>
+            <a href="{{ url_for('main.essay_structure') }}" class="button">Analyze Essay</a>
+        </div>
+        
+        <div class="feature-card">
+            <h3>Ask ZADI!</h3>
+            <div class="chatbox">
+                <div id="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Ask ZADI something...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
